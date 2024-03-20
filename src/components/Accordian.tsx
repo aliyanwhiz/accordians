@@ -27,6 +27,8 @@ const Accordian = () => {
 
     const handleToggleChange = () => {
       setMultiSelection(toggleSwitch.checked);
+      setMultiple([])
+      setClicked(null)
     };
 
     toggleSwitch.addEventListener("change", handleToggleChange);
@@ -41,7 +43,7 @@ const Accordian = () => {
       <div className="toggle-switch">
         <input className="toggle-input" id="toggle" type="checkbox" />
         <label className="toggle-label" htmlFor="toggle"></label>
-        <p>{MultiSelection ? "Multi Selection" : "single selection"}</p>
+        <p>{MultiSelection ? "Multi" : "Single"} Selection is active</p>
       </div>
 
       <div className="accordian">
